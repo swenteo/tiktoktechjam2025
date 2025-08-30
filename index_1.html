@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PII Guard - Privacy-First LLM Prompt Filter</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="header__title">🛡️ PII Guard</h1>
+            <p class="header__subtitle">Privacy-First LLM Prompt Filter</p>
+            <p class="header__description">Protect your privacy before sending prompts to AI services like ChatGPT, Claude, or any other LLM</p>
+        </header>
+
+        <section class="features">
+            <div class="features__grid">
+                <div class="feature-card">
+                    <div class="feature-card__icon">🔒</div>
+                    <h3 class="feature-card__title">On-Device Processing</h3>
+                    <p class="feature-card__description">All analysis happens locally on your device - your data never leaves</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon">🚀</div>
+                    <h3 class="feature-card__title">Real-Time Detection</h3>
+                    <p class="feature-card__description">Instant PII detection with advanced pattern recognition</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon">🎯</div>
+                    <h3 class="feature-card__title">Smart Redaction</h3>
+                    <p class="feature-card__description">Automatically clean sensitive information with one click</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="examples">
+            <h2 class="examples__title">Try These Examples</h2>
+            <div class="examples__buttons">
+                <button class="btn btn--outline btn--sm" data-example="0">High Risk Example</button>
+                <button class="btn btn--outline btn--sm" data-example="1">Medium Risk Example</button>
+                <button class="btn btn--outline btn--sm" data-example="2">Low Risk Example</button>
+            </div>
+        </section>
+
+        <section class="input-section">
+            <h2>Enter your prompt:</h2>
+            <textarea id="inputText" placeholder="Type or paste your prompt here before sending to ChatGPT, Claude, or any other LLM service...
+
+Example: Hi, my name is John Smith. My email is john@company.com and my phone is (555) 123-4567. Can you help me write a professional bio?"></textarea>
+            <div class="buttons">
+                <button id="analyzeBtn" class="btn btn--primary">🔍 Analyze Privacy Risk</button>
+                <button id="redactBtn" class="btn btn--secondary">🔒 Redact & Clean</button>
+                <button id="clearBtn" class="btn btn--tertiary">🗑️ Clear</button>
+            </div>
+        </section>
+
+        <section class="results-section" id="resultsSection" style="display: none;">
+            <h2>Privacy Analysis Results</h2>
+            <div id="riskIndicator" class="risk-indicator"></div>
+            <div id="detectionsList" class="detections-list"></div>
+            <div id="recommendationsList" class="recommendations"></div>
+            <div id="cleanedText" class="cleaned-text"></div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="privacy-notice">
+            <h3>🔐 Privacy Guarantee</h3>
+            <p>All processing happens locally on your device. No data is sent to external servers during analysis.</p>
+            <p>Your prompts remain completely private and secure.</p>
+        </div>
+        <div class="tech-info">
+            <p>Powered by fine-tuned DistilBERT • Built for AI Privacy Hackathon 2025</p>
+            <p>Open source under MIT License</p>
+        </div>
+    </footer>
+
+    <script src="static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PII Guard - Privacy-First LLM Prompt Filter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="header__title">🛡️ PII Guard</h1>
+            <p class="header__subtitle">Privacy-First LLM Prompt Filter</p>
+            <p class="header__description">Protect your privacy before sending prompts to AI services like ChatGPT, Claude, or any other LLM</p>
+        </header>
+
+        <section class="features">
+            <div class="features__grid">
+                <div class="feature-card">
+                    <div class="feature-card__icon">🔒</div>
+                    <h3 class="feature-card__title">On-Device Processing</h3>
+                    <p class="feature-card__description">All analysis happens locally on your device - your data never leaves</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon">🚀</div>
+                    <h3 class="feature-card__title">Real-Time Detection</h3>
+                    <p class="feature-card__description">Instant PII detection with advanced pattern recognition</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon">🎯</div>
+                    <h3 class="feature-card__title">Smart Redaction</h3>
+                    <p class="feature-card__description">Automatically clean sensitive information with one click</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="examples">
+            <h2 class="examples__title">Try These Examples</h2>
+            <div class="examples__buttons">
+                <button class="btn btn--outline btn--sm" data-example="0">High Risk Example</button>
+                <button class="btn btn--outline btn--sm" data-example="1">Medium Risk Example</button>
+                <button class="btn btn--outline btn--sm" data-example="2">Low Risk Example</button>
+            </div>
+        </section>
+
+        <section class="input-section">
+            <div class="form-group">
+                <label for="promptInput" class="form-label">Your AI Prompt</label>
+                <textarea 
+                    id="promptInput" 
+                    class="form-control input-section__textarea" 
+                    placeholder="Type or paste your prompt here before sending to ChatGPT, Claude, or any other LLM service..."
+                    rows="6"
+                ></textarea>
+            </div>
+            <div class="input-section__buttons">
+                <button id="analyzeBtn" class="btn btn--primary" disabled>🔍 Analyze Privacy Risk</button>
+                <button id="redactBtn" class="btn btn--secondary" disabled>🔒 Redact & Clean</button>
+                <button id="clearBtn" class="btn btn--outline">🗑️ Clear</button>
+            </div>
+        </section>
+
+        <section id="resultsSection" class="results hidden">
+            <div class="results__risk">
+                <div id="riskIndicator" class="risk-indicator">
+                    <div class="risk-indicator__badge">
+                        <span id="riskLevel" class="risk-indicator__level"></span>
+                    </div>
+                    <p id="riskMessage" class="risk-indicator__message"></p>
+                </div>
+            </div>
+
+            <div class="results__detection">
+                <h3 class="results__subtitle">🔍 Detected Information</h3>
+                <div id="detectedItems" class="detection-items"></div>
+            </div>
+
+            <div class="results__recommendations">
+                <h3 class="results__subtitle">💡 Privacy Recommendations</h3>
+                <ul id="recommendationsList" class="recommendations-list"></ul>
+            </div>
+
+            <div id="cleanedSection" class="results__cleaned hidden">
+                <h3 class="results__subtitle">✅ Cleaned Text</h3>
+                <div class="cleaned-output">
+                    <textarea id="cleanedText" class="form-control" readonly rows="6"></textarea>
+                    <button id="copyBtn" class="btn btn--primary btn--sm copy-btn">📋 Copy to Clipboard</button>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer__guarantee">
+                <h3 class="footer__title">🔐 Your Privacy is Guaranteed</h3>
+                <p class="footer__text">All text analysis happens locally in your browser. No data is sent to external servers or stored anywhere. Your sensitive information never leaves your device.</p>
+            </div>
+            <div class="footer__tech">
+                <p class="footer__tech-text">Powered by client-side processing • Built for privacy-conscious users</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
